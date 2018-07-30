@@ -15,8 +15,6 @@
         "--filesystem=xdg-documents"
     ],
     "command": "scummvm",
-    "rename-appdata-file": "scummvm.appdata.xml",
-    "rename-desktop-file": "scummvm.desktop",
     "rename-icon": "scummvm",
     "cleanup": [
         "/include",
@@ -36,12 +34,12 @@
                 },
                 {
                     "type": "file",
-                    "path": "scummvm.appdata.xml"
+                    "path": "org.scummvm.ScummVM.appdata.xml"
                 }
             ],
             "post-install": [
-                "install -Dm644 dists/scummvm.desktop /app/share/applications/scummvm.desktop",
-                "install -Dm644 scummvm.appdata.xml /app/share/appdata/scummvm.appdata.xml"
+                "install -Dm644 dists/scummvm.desktop /app/share/applications/org.scummvm.ScummVM.desktop",
+                "install -Dm644 org.scummvm.ScummVM.appdata.xml /app/share/appdata/org.scummvm.ScummVM.appdata.xml"
             ]
         }
     ]
