@@ -81,6 +81,7 @@
                 }
             ],
             "config-opts": [
+                "--enable-release",
                 "--with-fluidsynth-prefix=/app"
             ],
             "build-commands": [
