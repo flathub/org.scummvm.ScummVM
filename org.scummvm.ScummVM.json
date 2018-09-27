@@ -33,7 +33,7 @@
                     "sha256": "5ca094efbe13fdb880cfd0431354a7b85daf7239c344939493a2aaeca4e59ed5"
                 }
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DLIB_INSTALL_DIR=lib"
             ]
@@ -55,10 +55,16 @@
         {
             "name": "scummvm_wrapper",
             "buildsystem": "simple",
-            "sources": [{
-                "type": "dir",
-                "path": "scummvm_wrapper"
-            }],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "scummvm_wrapper/scummvm_wrapper.py"
+                },
+                {
+                    "type": "file",
+                    "path": "scummvm_wrapper/setup.py"
+                }
+            ],
             "build-commands": [
                 "python3 -mpip install . --prefix=/app --no-index --find-links ."
             ]
@@ -85,7 +91,7 @@
                 "--with-fluidsynth-prefix=/app"
             ],
             "build-commands": [
-                "sed -i s:Exec=scummvm:Exec=/app/bin/scummvm_wrapper: dists/scummvm.desktop"
+                "sed -i s:Exec=scummvm:Exec=scummvm_wrapper: dists/scummvm.desktop"
             ],
             "post-install": [
                 "install -Dm644 dists/scummvm.desktop /app/share/applications/org.scummvm.ScummVM.desktop",
