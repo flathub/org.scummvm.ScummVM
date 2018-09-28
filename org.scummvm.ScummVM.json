@@ -9,8 +9,6 @@
         "--share=network",
         "--socket=x11",
         "--socket=pulseaudio",
-        /* ScummVM does not respect XDG base directories */
-        "--persist=.scummvm",
         /* Allow Documents directory access - for storing ScummVM games etc. */
         "--filesystem=xdg-documents"
     ],
