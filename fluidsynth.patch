@@ -1,0 +1,12 @@
+diff -Naur scummvm-2.0.0.orig/configure scummvm-2.0.0/configure
+--- scummvm-2.0.0.orig/configure	2017-12-08 20:04:10.000000000 +0000
++++ scummvm-2.0.0/configure	2018-09-26 03:46:41.482690823 +0000
+@@ -4475,7 +4475,7 @@
+ 	;;
+ 
+ 	*)
+-		FLUIDSYNTH_STATIC_LIBS="$FLUIDSYNTH_LIBS -lglib-2.0 -lintl -liconv"
++		FLUIDSYNTH_STATIC_LIBS="$FLUIDSYNTH_LIBS -lglib-2.0"
+ 	;;
+ esac
+ 

@@ -14,7 +14,7 @@
         /* Allow Documents directory access - for storing ScummVM games etc. */
         "--filesystem=xdg-documents"
     ],
-    "command": "scummvm",
+    "command": "scummvm_wrapper",
     "rename-icon": "scummvm",
     "cleanup": [
         "/include",
@@ -25,6 +25,51 @@
     ],
     "modules": [
         {
+            "name": "fluidsynth",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/FluidSynth/fluidsynth/archive/v2.0.0.tar.gz",
+                    "sha256": "5ca094efbe13fdb880cfd0431354a7b85daf7239c344939493a2aaeca4e59ed5"
+                }
+            ],
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DLIB_INSTALL_DIR=lib"
+            ]
+        },
+        {
+            "name": "fluid_soundfont",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://http.debian.net/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1.orig.tar.gz",
+                    "sha256": "2621acaa1c78e4abdb24bdd163230cc577e61276936d6aa6e3180582142f0343"
+                }
+            ],
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm644 FluidR3_GM.sf2 /app/share/soundfonts/FluidR3_GM.sf2"
+            ]
+        },
+        {
+            "name": "scummvm_wrapper",
+            "buildsystem": "simple",
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "scummvm_wrapper/scummvm_wrapper.py"
+                },
+                {
+                    "type": "file",
+                    "path": "scummvm_wrapper/setup.py"
+                }
+            ],
+            "build-commands": [
+                "python3 -mpip install . --prefix=/app --no-index --find-links ."
+            ]
+},
+        {
             "name": "scummvm",
             "sources": [
                 {
@@ -33,9 +78,20 @@
                     "sha256": "1a7cb080d956220657734ac42f75168552171bd13983d58c4bd07fdf31bcc59a"
                 },
                 {
+                    "type": "patch",
+                    "path": "fluidsynth.patch"
+                },
+                {
                     "type": "file",
                     "path": "org.scummvm.ScummVM.appdata.xml"
                 }
+            ],
+            "config-opts": [
+                "--enable-release",
+                "--with-fluidsynth-prefix=/app"
+            ],
+            "build-commands": [
+                "sed -i s:Exec=scummvm:Exec=scummvm_wrapper: dists/scummvm.desktop"
             ],
             "post-install": [
                 "install -Dm644 dists/scummvm.desktop /app/share/applications/org.scummvm.ScummVM.desktop",
