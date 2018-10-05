@@ -51,6 +51,80 @@
             ]
         },
         {
+            "name": "faad2",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/faac/files/faad2-src/faad2-2.8.0/faad2-2.8.8.tar.gz",
+                    "sha256": "985c3fadb9789d2815e50f4ff714511c79c2710ac27a4aaaf5c0c2662141426d"
+                }
+            ]
+        },
+        {
+            "name": "libmad",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://sourceforge.net/projects/mad/files/libmad/0.15.1b/libmad-0.15.1b.tar.gz",
+                    "sha256": "bbfac3ed6bfbc2823d3775ebb931087371e142bb0e9bb1bee51a76a6e0078690"
+                },
+                /* Patches from Arch Linux */
+                {
+                    "type": "patch",
+                    "path": "libmad/libmad.patch"
+                },
+                /* Patches from Debian */
+                {
+                    "type": "patch",
+                    "path": "libmad/amd64-64bit.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/frame_length.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/optimize.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/libmad.thumb.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/mips-gcc4.4.diff"
+                },
+                {
+                    "type": "shell",
+                    "commands": ["cp /usr/share/gnu-config/config.{guess,sub} ."]
+                },
+                {
+                    "type": "script",
+                    "commands": ["autoconf"],
+                    "dest-filename": "autogen.sh"
+                }
+            ],
+            "rm-configure": true
+        },
+        {
+            "name": "libmpeg2",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz",
+                    "sha256": "dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4"
+                },
+                {
+                    "type": "shell",
+                    "commands": ["cp /usr/share/gnu-config/config.{guess,sub} .auto/"]
+                }
+            ]
+        },
+        {
             "name": "scummvm_wrapper",
             "buildsystem": "simple",
             "sources": [
@@ -66,7 +140,7 @@
             "build-commands": [
                 "python3 -mpip install . --prefix=/app --no-index --find-links ."
             ]
-},
+        },
         {
             "name": "scummvm",
             "sources": [
@@ -76,17 +150,12 @@
                     "sha256": "1a7cb080d956220657734ac42f75168552171bd13983d58c4bd07fdf31bcc59a"
                 },
                 {
-                    "type": "patch",
-                    "path": "fluidsynth.patch"
-                },
-                {
                     "type": "file",
                     "path": "org.scummvm.ScummVM.appdata.xml"
                 }
             ],
             "config-opts": [
-                "--enable-release",
-                "--with-fluidsynth-prefix=/app"
+                "--enable-release"
             ],
             "build-commands": [
                 "sed -i s:Exec=scummvm:Exec=scummvm_wrapper: dists/scummvm.desktop"
