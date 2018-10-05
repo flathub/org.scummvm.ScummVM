@@ -99,6 +99,10 @@
                     "path": "libmad/mips-gcc4.4.diff"
                 },
                 {
+                    "type": "shell",
+                    "commands": ["cp /usr/share/gnu-config/config.{guess,sub} ."]
+                },
+                {
                     "type": "script",
                     "commands": ["autoconf"],
                     "dest-filename": "autogen.sh"
