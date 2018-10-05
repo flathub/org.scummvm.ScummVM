@@ -73,6 +73,7 @@
                     "type": "patch",
                     "path": "libmad/libmad.patch"
                 },
+                /* Patches from Debian */
                 {
                     "type": "patch",
                     "path": "libmad/amd64-64bit.diff"
@@ -84,6 +85,18 @@
                 {
                     "type": "patch",
                     "path": "libmad/optimize.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/libmad.thumb.diff"
+                },
+                {
+                    "type": "patch",
+                    "path": "libmad/mips-gcc4.4.diff"
                 },
                 {
                     "type": "script",
