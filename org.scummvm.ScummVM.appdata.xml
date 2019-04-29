@@ -3,6 +3,9 @@
   <id>org.scummvm.ScummVM.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
+  <provides>
+    <id>scummvm.desktop</id>
+  </provides>
   <name>ScummVM</name>
   <summary>Interpreter for several adventure games</summary>
   <description>
