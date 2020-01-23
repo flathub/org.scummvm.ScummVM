@@ -27,8 +27,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/FluidSynth/fluidsynth/archive/v2.0.7.tar.gz",
-                    "sha256": "b68876d24c7fb34575ffa389bcfe8e61a24f1cf1da8ec6c3b2053efde98d0320"
+                    "url": "https://github.com/FluidSynth/fluidsynth/archive/v2.1.0.tar.gz",
+                    "sha256": "526addc6d8445035840d3af7282d3ba89567df209d28e183da04a1a877da2da3"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -146,8 +146,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/scummvm/scummvm/archive/v2.1.0.tar.gz",
-                    "sha256": "caa64f994e60166f6cb575fb9008964a3654e164e334d8f9e732cd549c3da6bb"
+                    "url": "https://github.com/scummvm/scummvm/archive/v2.1.1.tar.gz",
+                    "sha256": "b5d70a9f2d146861589207b9f609ba270917c7ec3725305b3bf94ee90843b734"
                 },
                 {
                     "type": "file",
