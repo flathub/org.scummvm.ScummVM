@@ -27,8 +27,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/FluidSynth/fluidsynth/archive/v2.0.7.tar.gz",
-                    "sha256": "b68876d24c7fb34575ffa389bcfe8e61a24f1cf1da8ec6c3b2053efde98d0320"
+                    "url": "https://github.com/FluidSynth/fluidsynth/archive/v2.0.9.tar.gz",
+                    "sha256": "bfe82ccf1bf00ff5cfc18e2d9d1e5d95c6bd169a76a2dec14898d1ee0e0fac8a"
                 }
             ],
             "buildsystem": "cmake-ninja",
@@ -125,6 +125,20 @@
             ]
         },
         {
+            "name": "liba52",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://liba52.sourceforge.net/files/a52dec-0.7.4.tar.gz",
+                    "sha256": "a21d724ab3b3933330194353687df82c475b5dfb997513eef4c25de6c865ec33"
+                },
+                {
+                    "type": "shell",
+                    "commands": ["cp /usr/share/gnu-config/config.{guess,sub} ./autotools"]
+                }
+            ]
+        },
+        {
             "name": "scummvm_wrapper",
             "buildsystem": "simple",
             "sources": [
@@ -146,8 +160,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/scummvm/scummvm/archive/v2.1.0.tar.gz",
-                    "sha256": "caa64f994e60166f6cb575fb9008964a3654e164e334d8f9e732cd549c3da6bb"
+                    "url": "https://github.com/scummvm/scummvm/archive/v2.1.1.tar.gz",
+                    "sha256": "b5d70a9f2d146861589207b9f609ba270917c7ec3725305b3bf94ee90843b734"
                 },
                 {
                     "type": "file",
@@ -155,7 +169,8 @@
                 }
             ],
             "config-opts": [
-                "--enable-release"
+                "--enable-release",
+                "--disable-debug"
             ],
             "build-commands": [
                 "sed -i s:Exec=scummvm:Exec=scummvm_wrapper: dists/scummvm.desktop"
