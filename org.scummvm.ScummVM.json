@@ -165,7 +165,8 @@
                 }
             ],
             "config-opts": [
-                "--enable-release"
+                "--enable-release",
+                "--disable-debug"
             ],
             "build-commands": [
                 "sed -i s:Exec=scummvm:Exec=scummvm_wrapper: dists/scummvm.desktop"
