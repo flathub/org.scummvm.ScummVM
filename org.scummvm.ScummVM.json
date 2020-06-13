@@ -4,13 +4,14 @@
     "runtime-version": "19.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
-        "--device=all",
-        "--share=ipc",
-        "--share=network",
-        "--socket=x11",
-        "--socket=pulseaudio",
-        /* Allow Documents directory access - for storing ScummVM games etc. */
-        "--filesystem=xdg-documents"
+	"--device=all",
+	"--share=ipc",
+	"--share=network",
+	"--socket=x11",
+	"--socket=wayland",
+	"--socket=pulseaudio",
+	"--socket=session-bus",
+	"--filesystem=xdg-documents"
     ],
     "command": "scummvm_wrapper",
     "rename-icon": "scummvm",
@@ -22,6 +23,8 @@
         "*.la", "*.a"
     ],
     "modules": [
+    	"shared-modules/intltool/intltool-0.51.json",
+    	"shared-modules/dbus-glib/dbus-glib-0.110.json",
         {
             "name": "fluidsynth",
             "sources": [
@@ -68,12 +71,10 @@
                     "url": "https://sourceforge.net/projects/mad/files/libmad/0.15.1b/libmad-0.15.1b.tar.gz",
                     "sha256": "bbfac3ed6bfbc2823d3775ebb931087371e142bb0e9bb1bee51a76a6e0078690"
                 },
-                /* Patches from Arch Linux */
                 {
                     "type": "patch",
                     "path": "libmad/libmad.patch"
                 },
-                /* Patches from Debian */
                 {
                     "type": "patch",
                     "path": "libmad/amd64-64bit.diff"
@@ -160,8 +161,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/scummvm/scummvm/archive/v2.1.1.tar.gz",
-                    "sha256": "b5d70a9f2d146861589207b9f609ba270917c7ec3725305b3bf94ee90843b734"
+                    "url": "https://github.com/scummvm/scummvm/archive/v2.1.2.tar.gz",
+                    "sha256": "6fa84983bf9219c2a4560945e4056b0cc74b55989584224c3b02d5321f558b01"
                 },
                 {
                     "type": "file",
