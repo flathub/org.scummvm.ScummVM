@@ -20,7 +20,7 @@ def get_default_config_file_name():
     return os.path.join(config_home, "scummvm", BASE_CONFIG_NAME)
 
 
-def configure_midi(config):
+def configure_settings(config):
     modified = False
     if not config.has_section("scummvm"):
         config.add_section("scummvm")
@@ -29,6 +29,9 @@ def configure_midi(config):
         modified = True
     if config.get("scummvm", "music_driver", fallback="") in ("", "auto"):
         config.set("scummvm", "music_driver", MUSIC_DRIVER)
+        modified = True
+    if not config.get("scummvm", "aspect_ratio", fallback=""):
+        config.set("scummvm", "aspect_ratio", "true")
         modified = True
     return modified
 
@@ -39,7 +42,7 @@ def main():
         os.makedirs(os.path.dirname(config_file))
     config = configparser.RawConfigParser()
     config.read(config_file, encoding=CONFIG_ENCODING)
-    config_modified = configure_midi(config)
+    config_modified = configure_settings(config)
     if config_modified:
         with open(config_file, "w", encoding=CONFIG_ENCODING) as f:
             config.write(f)
