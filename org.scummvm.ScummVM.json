@@ -124,6 +124,7 @@
             ],
             "config-opts": [
                 "--enable-release",
+                "--disable-sdlnet",
                 "--disable-debug"
             ],
             "build-commands": [
