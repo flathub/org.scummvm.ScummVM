@@ -3,11 +3,12 @@
   <id>org.scummvm.ScummVM.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
+  <name>ScummVM</name>
+  <summary>Interpreter for numerous adventure games and role-playing games</summary>
+  <developer_name>The ScummVM Team</developer_name>
   <provides>
     <id>scummvm.desktop</id>
   </provides>
-  <name>ScummVM</name>
-  <summary>Interpreter for numerous adventure games and role-playing games</summary>
   <description>
     <p>
       ScummVM is a program which allows you to run a wide variety of classic
