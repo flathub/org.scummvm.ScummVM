@@ -6,6 +6,7 @@
   <project_license>GPL-2.0+</project_license>
   <name>ScummVM</name>
   <summary>Interpreter for numerous adventure games and role-playing games</summary>
+  <summary xml:lang="de">Interpreter für zahlreiche Adventure-Spiele und RPGs</summary>
   <developer_name>The ScummVM Team</developer_name>
   <provides>
     <id>scummvm.desktop</id>
@@ -35,8 +36,24 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image>http://wiki.scummvm.org/images/f/f8/Launcherwithgames.png</image>
+      <image>https://www.scummvm.org/frs/extras/storefront/screenshots/screenshot_1.png</image>
       <caption>ScummVM Launcher</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.scummvm.org/frs/extras/storefront/screenshots/screenshot_2.png</image>
+      <caption>ScummVM running 'Flight of the Amazon Queen'</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.scummvm.org/frs/extras/storefront/screenshots/screenshot_3.png</image>
+      <caption>ScummVM running 'Beneath a Steel Sky'</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.scummvm.org/frs/extras/storefront/screenshots/screenshot_4.png</image>
+      <caption>ScummVM running 'The Curse of Monkey Island'</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://www.scummvm.org/frs/extras/storefront/screenshots/screenshot_5.png</image>
+      <caption>ScummVM running a demo of 'Myst'</caption>
     </screenshot>
   </screenshots>
   <url type="homepage">https://www.scummvm.org</url>
