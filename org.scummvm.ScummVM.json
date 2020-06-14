@@ -10,7 +10,6 @@
 	"--socket=x11",
 	"--socket=wayland",
 	"--socket=pulseaudio",
-	"--socket=session-bus",
 	"--filesystem=xdg-documents"
     ],
     "command": "scummvm_wrapper",
