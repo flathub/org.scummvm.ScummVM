@@ -111,8 +111,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/scummvm/scummvm/archive/v2.1.2.tar.gz",
-                    "sha256": "6fa84983bf9219c2a4560945e4056b0cc74b55989584224c3b02d5321f558b01"
+                    "url": "https://github.com/scummvm/scummvm/archive/v2.2.0.tar.gz",
+                    "sha256": "ccb73ef62a8316a2fe9c7ba2827409099b1ac02a43ace3702afe9ff4c6c3ecc2"
                 },
                 {
                     "type": "file",
