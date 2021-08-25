@@ -122,7 +122,8 @@
             "config-opts": [
                 "--enable-release",
                 "--disable-sdlnet",
-                "--disable-debug"
+                "--disable-debug",
+                "--disable-system-dialogs"
             ],
             "build-commands": [
                 "sed -i s:Exec=scummvm:Exec=scummvm_wrapper: dists/scummvm.desktop"
