@@ -4,13 +4,13 @@
     "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "finish-args": [
-	"--device=all",
-	"--share=ipc",
-	"--share=network",
-	"--socket=x11",
-	"--socket=wayland",
-	"--socket=pulseaudio",
-	"--filesystem=xdg-documents"
+        "--device=all",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--filesystem=xdg-documents"
     ],
     "command": "scummvm_wrapper",
     "rename-icon": "scummvm",
@@ -22,7 +22,7 @@
         "*.la", "*.a"
     ],
     "modules": [
-	"shared-modules/libmad/libmad.json",
+        "shared-modules/libmad/libmad.json",
         {
             "name": "fluidsynth",
             "sources": [
