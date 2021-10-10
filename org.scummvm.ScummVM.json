@@ -23,6 +23,8 @@
     ],
     "modules": [
         "shared-modules/libmad/libmad.json",
+        "shared-modules/glu/glu-9.json",
+        "shared-modules/glew/glew.json",
         {
             "name": "fluidsynth",
             "sources": [
