@@ -113,8 +113,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.scummvm.org/frs/scummvm/2.6.1/scummvm-2.6.1.tar.bz2",
-                    "sha256": "2e9451ea62f84596f6d87a4c384015b7202493a9f78256388c15a343d88b34cf"
+                    "url": "https://downloads.scummvm.org/frs/scummvm/2.7.0/scummvm-2.7.0.tar.bz2",
+                    "sha256": "8003135c1c8999f9b79dc1d6a4f48ff79bb85ae800c72d94f3c7dd604db1c9c5"
                 },
                 {
                     "type": "file",
