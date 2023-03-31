@@ -26,20 +26,7 @@
         "shared-modules/libmad/libmad.json",
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
-        {
-            "name": "fluidsynth",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/FluidSynth/fluidsynth/archive/v2.1.9.tar.gz",
-                    "sha256": "365642cc64bafe0491149ad643ef7327877f99412d5abb93f1fa54e252028484"
-                }
-            ],
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DLIB_INSTALL_DIR=lib"
-            ]
-        },
+        "shared-modules/linux-audio/fluidsynth2.json",
         {
             "name": "fluid_soundfont",
             "sources": [
