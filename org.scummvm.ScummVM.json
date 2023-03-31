@@ -20,7 +20,8 @@
         "/lib/pkgconfig",
         "/share/aclocal",
         "/share/man",
-        "*.la", "*.a"
+        "*.la",
+        "*.a"
     ],
     "modules": [
         "shared-modules/libmad/libmad.json",
@@ -32,7 +33,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://http.debian.net/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1.orig.tar.gz",
+                    "url": "http://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1.orig.tar.gz",
                     "sha256": "2621acaa1c78e4abdb24bdd163230cc577e61276936d6aa6e3180582142f0343",
                     "x-checker-data": {
                         "type": "anitya",
@@ -51,8 +52,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://sourceforge.net/projects/faac/files/faad2-src/faad2-2.8.0/faad2-2.8.8.tar.gz",
-                    "sha256": "985c3fadb9789d2815e50f4ff714511c79c2710ac27a4aaaf5c0c2662141426d",
+                    "url": "https://github.com/knik0/faad2/archive/2.10.1.tar.gz",
+                    "sha256": "4c16c71295ca0cbf7c3dfe98eb11d8fa8d0ac3042e41604cfd6cc11a408cf264",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13755,
@@ -66,7 +67,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz",
+                    "url": "https://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz",
                     "sha256": "dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4",
                     "x-checker-data": {
                         "type": "anitya",
@@ -76,7 +77,9 @@
                 },
                 {
                     "type": "shell",
-                    "commands": ["cp /usr/share/gnu-config/config.{guess,sub} .auto/"]
+                    "commands": [
+                        "cp /usr/share/gnu-config/config.{guess,sub} .auto/"
+                    ]
                 }
             ]
         },
@@ -85,7 +88,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://liba52.sourceforge.net/files/a52dec-0.7.4.tar.gz",
+                    "url": "https://liba52.sourceforge.net/files/a52dec-0.7.4.tar.gz",
                     "sha256": "a21d724ab3b3933330194353687df82c475b5dfb997513eef4c25de6c865ec33",
                     "x-checker-data": {
                         "type": "anitya",
@@ -95,7 +98,9 @@
                 },
                 {
                     "type": "shell",
-                    "commands": ["cp /usr/share/gnu-config/config.{guess,sub} ./autotools"]
+                    "commands": [
+                        "cp /usr/share/gnu-config/config.{guess,sub} ./autotools"
+                    ]
                 }
             ]
         },
