@@ -23,6 +23,7 @@
         "*.la", "*.a"
     ],
     "modules": [
+        "shared-modules/SDL2/SDL2-with-libdecor.json",
         "shared-modules/libmad/libmad.json",
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
