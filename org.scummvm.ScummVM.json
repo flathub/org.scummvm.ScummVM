@@ -124,7 +124,6 @@
             ],
             "config-opts": [
                 "--enable-release",
-                "--disable-sdlnet",
                 "--disable-debug",
                 "--disable-system-dialogs"
             ],
