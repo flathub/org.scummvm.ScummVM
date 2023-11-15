@@ -53,8 +53,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/knik0/faad2/archive/2.11.0.tar.gz",
-                    "sha256": "720c1dc404439e0a9117aa144dc7ead56f1658adf4badbb39f959d6ad8eed489",
+                    "url": "https://github.com/knik0/faad2/archive/2.11.1.tar.gz",
+                    "sha256": "72dbc0494de9ee38d240f670eccf2b10ef715fd0508c305532ca3def3225bb06",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13755,
