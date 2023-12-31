@@ -14,7 +14,9 @@
         "--filesystem=xdg-pictures"
     ],
     "command": "scummvm_wrapper",
-    "rename-icon": "scummvm",
+    "rename-icon": "org.scummvm.scummvm",
+    "rename-desktop-file": "org.scummvm.scummvm.desktop",
+    "rename-appdata-file": "org.scummvm.scummvm.metainfo.xml",
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
@@ -127,8 +129,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.scummvm.org/frs/scummvm/2.7.1/scummvm-2.7.1.tar.bz2",
-                    "sha256": "dd303fc56805a4bc7c69990add566e149a0c3002f5c0e87df876c58e6b8df8cc",
+                    "url": "https://downloads.scummvm.org/frs/scummvm/2.8.0/scummvm-2.8.0.tar.bz2",
+                    "sha256": "ef6c820159e6a1811fbbb903a543c19744f66515289cdb0a6a6d1db0d24090bf",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 4775,
@@ -136,8 +138,8 @@
                     }
                 },
                 {
-                    "type": "file",
-                    "path": "org.scummvm.ScummVM.appdata.xml"
+                    "type": "patch",
+                    "path": "metainfo.patch"
                 }
             ],
             "config-opts": [
@@ -145,12 +147,9 @@
                 "--disable-debug",
                 "--disable-system-dialogs"
             ],
-            "build-commands": [
-                "sed -i s:Exec=scummvm:Exec=scummvm_wrapper: dists/scummvm.desktop"
-            ],
             "post-install": [
-                "install -Dm644 dists/scummvm.desktop /app/share/applications/org.scummvm.ScummVM.desktop",
-                "install -Dm644 org.scummvm.ScummVM.appdata.xml /app/share/appdata/org.scummvm.ScummVM.appdata.xml"
+                "desktop-file-edit --set-key='Exec' --set-value='scummvm_wrapper' /app/share/applications/org.scummvm.scummvm.desktop",
+                "sed -i 's/org.scummvm.scummvm/org.scummvm.ScummVM/g' /app/share/metainfo/org.scummvm.scummvm.metainfo.xml"
             ]
         }
     ]
