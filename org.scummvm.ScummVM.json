@@ -10,8 +10,7 @@
         "--socket=x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--filesystem=xdg-documents",
-        "--filesystem=xdg-pictures"
+        "--filesystem=home"
     ],
     "command": "scummvm_wrapper",
     "rename-icon": "org.scummvm.scummvm",
