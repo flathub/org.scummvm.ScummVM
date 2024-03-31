@@ -128,8 +128,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.scummvm.org/frs/scummvm/2.8.0/scummvm-2.8.0.tar.bz2",
-                    "sha256": "ef6c820159e6a1811fbbb903a543c19744f66515289cdb0a6a6d1db0d24090bf",
+                    "url": "https://downloads.scummvm.org/frs/scummvm/2.8.1/scummvm-2.8.1.tar.bz2",
+                    "sha256": "a9d97b1a3a616abf27343e068cded67b486e4ded8f842c88b7e2957c33c1d48b",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 4775,
