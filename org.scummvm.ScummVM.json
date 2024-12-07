@@ -128,8 +128,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://downloads.scummvm.org/frs/scummvm/2.8.1/scummvm-2.8.1.tar.bz2",
-                    "sha256": "a9d97b1a3a616abf27343e068cded67b486e4ded8f842c88b7e2957c33c1d48b",
+                    "url": "https://downloads.scummvm.org/frs/scummvm/2.9.0/scummvm-2.9.0.tar.bz2",
+                    "sha256": "9bfb67083524bbe48d56e1ce9cfae8af73817909fcc3d938a550c031aaaa23e5",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 4775,
@@ -139,10 +139,6 @@
                 {
                     "type": "patch",
                     "path": "metainfo.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "ags-support-freetype-2.13.3.patch"
                 }
             ],
             "config-opts": [
