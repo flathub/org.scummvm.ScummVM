@@ -24,13 +24,8 @@ def configure_settings(config):
     modified = False
     if not config.has_section("scummvm"):
         config.add_section("scummvm")
-    if not config.get("scummvm", "soundfont", fallback=""):
         config.set("scummvm", "soundfont", SOUNDFONT_PATH)
-        modified = True
-    if config.get("scummvm", "music_driver", fallback="") in ("", "auto"):
         config.set("scummvm", "music_driver", MUSIC_DRIVER)
-        modified = True
-    if not config.get("scummvm", "aspect_ratio", fallback=""):
         config.set("scummvm", "aspect_ratio", "true")
         modified = True
     return modified
