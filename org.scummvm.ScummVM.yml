@@ -15,10 +15,10 @@ rename-icon: org.scummvm.scummvm
 rename-desktop-file: org.scummvm.scummvm.desktop
 rename-appdata-file: org.scummvm.scummvm.metainfo.xml
 cleanup:
-  - '/include'
-  - '/lib/pkgconfig'
-  - '/share/aclocal'
-  - '/share/man'
+  - /include
+  - /lib/pkgconfig
+  - /share/aclocal
+  - /share/man
   - '*.la'
   - '*.a'
 modules:
@@ -90,8 +90,8 @@ modules:
   - name: scummvm
     sources:
       - type: archive
-        url: https://downloads.scummvm.org/frs/scummvm/2.9.0/scummvm-2.9.0.tar.bz2
-        sha256: 9bfb67083524bbe48d56e1ce9cfae8af73817909fcc3d938a550c031aaaa23e5
+        url: https://downloads.scummvm.org/frs/scummvm/2.9.1/scummvm-2.9.1.tar.bz2
+        sha256: f646fbd8767cceec8752b03361d84ace55835714a53fc3a8f2f6d991d312ac77
         x-checker-data:
           type: anitya
           project-id: 4775
