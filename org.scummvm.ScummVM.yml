@@ -1,6 +1,6 @@
 app-id: org.scummvm.ScummVM
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 finish-args:
   - --device=all
@@ -54,28 +54,25 @@ modules:
   - name: libmpeg2
     sources:
       - type: archive
-        url: https://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz
+        url: https://download.videolan.org/contrib/libmpeg2/libmpeg2-0.5.1.tar.gz
         sha256: dee22e893cb5fc2b2b6ebd60b88478ab8556cb3b93f9a0d7ce8f3b61851871d4
         x-checker-data:
           type: anitya
           project-id: 21490
-          url-template: https://libmpeg2.sourceforge.net/files/libmpeg2-$version.tar.gz
+          url-template: https://download.videolan.org/contrib/libmpeg2/libmpeg2-$version.tar.gz
       - type: shell
         commands:
-          - cp /usr/share/gnu-config/config.{guess,sub} .auto/
+          - cp /usr/share/automake-*/config.{guess,sub} .auto/
 
   - name: liba52
     sources:
       - type: archive
-        url: https://sourceforge.net/projects/vlc/files/0.4.6/contrib/a52dec-0.7.4.tar.gz
-        sha256: a21d724ab3b3933330194353687df82c475b5dfb997513eef4c25de6c865ec33
+        url: https://git.adelielinux.org/community/a52dec/-/archive/v0.8.0/a52dec-v0.8.0.tar.gz
+        sha256: 470d084074d15416a0f0f300b85b61ddcc1ce105ad14a2aac670a1767ecba8de
         x-checker-data:
           type: anitya
           project-id: 13972
-          url-template: https://sourceforge.net/projects/vlc/files/0.4.6/contrib/a52dec-$version.tar.gz
-      - type: shell
-        commands:
-          - cp /usr/share/gnu-config/config.{guess,sub} ./autotools
+          url-template: https://git.adelielinux.org/community/a52dec/-/archive/v$version/a52dec-v$version.tar.gz
 
   - name: scummvm_wrapper
     buildsystem: simple
