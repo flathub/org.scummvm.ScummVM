@@ -82,7 +82,7 @@ modules:
       - type: file
         path: scummvm_wrapper/setup.py
     build-commands:
-      - python3 -mpip install . --prefix=/app --no-index --find-links .
+      - python3 -mpip install . --no-build-isolation --prefix=/app --no-index --find-links .
 
   - name: scummvm
     sources:
