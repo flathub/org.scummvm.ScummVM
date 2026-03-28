@@ -82,13 +82,14 @@ modules:
       - type: file
         path: scummvm_wrapper/setup.py
     build-commands:
-      - python3 -mpip install . --no-build-isolation --prefix=/app --no-index --find-links .
+      - python3 -mpip install . --no-build-isolation --prefix=/app --no-index --find-links
+        .
 
   - name: scummvm
     sources:
       - type: archive
-        url: https://downloads.scummvm.org/frs/scummvm/2026.1.0/scummvm-2026.1.0.tar.bz2
-        sha256: 1ce520faa16bc19d173d5296b4561979535b43ded0948e0249e2e8cb3d1d9bea
+        url: https://downloads.scummvm.org/frs/scummvm/2026.2.0/scummvm-2026.2.0.tar.bz2
+        sha256: 4b3da6257f8f1a79f5a38ef10535d80873fa6abd42f5a54e2cf18a4acd5b7d3f
         x-checker-data:
           type: anitya
           project-id: 4775
