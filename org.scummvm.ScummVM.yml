@@ -88,8 +88,8 @@ modules:
   - name: scummvm
     sources:
       - type: archive
-        url: https://downloads.scummvm.org/frs/scummvm/2026.2.0/scummvm-2026.2.0.tar.bz2
-        sha256: 4b3da6257f8f1a79f5a38ef10535d80873fa6abd42f5a54e2cf18a4acd5b7d3f
+        url: https://downloads.scummvm.org/frs/scummvm/2026.3.0/scummvm-2026.3.0.tar.bz2
+        sha256: 342f6fbdc4b228fbe17cb2f8421538c6bd743bac4dbf1009e3de330b536cfe92
         x-checker-data:
           type: anitya
           project-id: 4775
