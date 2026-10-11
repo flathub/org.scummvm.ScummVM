@@ -44,8 +44,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/knik0/faad2/archive/2.11.3.tar.gz
-        sha256: 860ab62087e336c1844a70e33196c1790b525fb9a9e7b6ac4fab1a1a4e4d5ce8
+        url: https://github.com/knik0/faad2/archive/2.11.4.tar.gz
+        sha256: ee479ccbae4a8387ab696e6f21a481bd83fe3881471cafa81b4ae59d7d3aed43
         x-checker-data:
           type: anitya
           project-id: 13755
@@ -88,8 +88,8 @@ modules:
   - name: scummvm
     sources:
       - type: archive
-        url: https://downloads.scummvm.org/frs/scummvm/2026.3.0/scummvm-2026.3.0.tar.bz2
-        sha256: 342f6fbdc4b228fbe17cb2f8421538c6bd743bac4dbf1009e3de330b536cfe92
+        url: https://downloads.scummvm.org/frs/scummvm/2026.4.0/scummvm-2026.4.0.tar.bz2
+        sha256: ee6c33ddbbbb6f5fe092792d3b761c5f333cc6005e21737b62fcebb0e4bcd424
         x-checker-data:
           type: anitya
           project-id: 4775
